@@ -11,6 +11,7 @@
 		CE802993232617EB00D4AEFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE802992232617EB00D4AEFA /* Assets.xcassets */; };
 		CE8029A023262F9400D4AEFA /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80299F23262F9400D4AEFA /* UIView + Extensions.swift */; };
 		CE8029A3232640C500D4AEFA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8029A2232640C500D4AEFA /* Coordinator.swift */; };
+		CE8029A5232642C800D4AEFA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8029A4232642C800D4AEFA /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		CE802997232617EB00D4AEFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE80299F23262F9400D4AEFA /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 		CE8029A2232640C500D4AEFA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CE8029A4232642C800D4AEFA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				CE8029A2232640C500D4AEFA /* Coordinator.swift */,
+				CE8029A4232642C800D4AEFA /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8029A5232642C800D4AEFA /* AppCoordinator.swift in Sources */,
 				CE8029A023262F9400D4AEFA /* UIView + Extensions.swift in Sources */,
 				CE80298C2326176400D4AEFA /* AppDelegate.swift in Sources */,
 				CE8029A3232640C500D4AEFA /* Coordinator.swift in Sources */,
