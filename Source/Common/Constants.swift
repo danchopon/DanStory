@@ -11,7 +11,17 @@ import Foundation
 struct Constants {
     
     struct Network {
-        static let splashBaseUrl = "https://api.unsplash.com"
+        static let unsplashBaseUrl = "https://api.unsplash.com"
+        
+        /*
+         
+         To access Secrets.UNSPLASH_API_ACCESS_KEY -> Create Secrets.swift file and type inside code below:
+                struct Secrets {
+                    static let UNSPLASH_API_ACCESS_KEY = "$YOUR_UNSPLASH_ACCESS_KEY"
+                }
+         
+        */
+        
+        static let unsplashAuthorizationClientId = "Client-ID \(Secrets.UNSPLASH_API_ACCESS_KEY)"
     }
-    
 }
