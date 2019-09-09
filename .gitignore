@@ -19,3 +19,6 @@ DerivedData
 *.xcworkspace
 !default.xcworkspace
 *.xcuserdata
+
+# Secret Keys
+/Source/Common/Secrets.swift
