@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2A111723265BB70079145F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A111623265BB70079145F /* Constants.swift */; };
 		CE80298C2326176400D4AEFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80298B2326176400D4AEFA /* AppDelegate.swift */; };
 		CE802993232617EB00D4AEFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE802992232617EB00D4AEFA /* Assets.xcassets */; };
 		CE8029A023262F9400D4AEFA /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80299F23262F9400D4AEFA /* UIView + Extensions.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE2A111623265BB70079145F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE8029882326176400D4AEFA /* DanStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DanStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE80298B2326176400D4AEFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE802992232617EB00D4AEFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE2A111523265B850079145F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE80299F23262F9400D4AEFA /* UIView + Extensions.swift */,
+				CE2A111623265BB70079145F /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		CE80297F2326176400D4AEFA = {
 			isa = PBXGroup;
 			children = (
@@ -87,20 +98,13 @@
 		CE80299D23262F3A00D4AEFA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CE2A111523265B850079145F /* Common */,
+				CE8029C023265A6E00D4AEFA /* Scenes */,
 				CE8029B52326458400D4AEFA /* Models */,
 				CE8029A62326439F00D4AEFA /* Network */,
 				CE8029A1232640A800D4AEFA /* Coordinator */,
-				CE80299E23262F4E00D4AEFA /* Helpers */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		CE80299E23262F4E00D4AEFA /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				CE80299F23262F9400D4AEFA /* UIView + Extensions.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		CE8029A1232640A800D4AEFA /* Coordinator */ = {
@@ -151,6 +155,13 @@
 				CE8029B6232645A500D4AEFA /* DSError.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CE8029C023265A6E00D4AEFA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 				CE8029BD2326463800D4AEFA /* URLParameterEncoder.swift in Sources */,
 				CE8029BF2326464F00D4AEFA /* JSONParameterEncoder.swift in Sources */,
 				CE8029A5232642C800D4AEFA /* AppCoordinator.swift in Sources */,
+				CE2A111723265BB70079145F /* Constants.swift in Sources */,
 				CE8029A023262F9400D4AEFA /* UIView + Extensions.swift in Sources */,
 				CE8029AC232643F500D4AEFA /* EndPointType.swift in Sources */,
 				CE8029BB2326461900D4AEFA /* ParameterEncoding.swift in Sources */,
