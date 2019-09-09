@@ -10,6 +10,7 @@
 		CE80298C2326176400D4AEFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80298B2326176400D4AEFA /* AppDelegate.swift */; };
 		CE802993232617EB00D4AEFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE802992232617EB00D4AEFA /* Assets.xcassets */; };
 		CE8029A023262F9400D4AEFA /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80299F23262F9400D4AEFA /* UIView + Extensions.swift */; };
+		CE8029A3232640C500D4AEFA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8029A2232640C500D4AEFA /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,7 @@
 		CE802992232617EB00D4AEFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE802997232617EB00D4AEFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE80299F23262F9400D4AEFA /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
+		CE8029A2232640C500D4AEFA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		CE80299D23262F3A00D4AEFA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CE8029A1232640A800D4AEFA /* Coordinator */,
 				CE80299E23262F4E00D4AEFA /* Helpers */,
 			);
 			path = Source;
@@ -72,6 +75,14 @@
 				CE80299F23262F9400D4AEFA /* UIView + Extensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CE8029A1232640A800D4AEFA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CE8029A2232640C500D4AEFA /* Coordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +156,7 @@
 			files = (
 				CE8029A023262F9400D4AEFA /* UIView + Extensions.swift in Sources */,
 				CE80298C2326176400D4AEFA /* AppDelegate.swift in Sources */,
+				CE8029A3232640C500D4AEFA /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +283,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UG52XXUG9P;
 				INFOPLIST_FILE = DanStory/Info.plist;
@@ -289,6 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UG52XXUG9P;
 				INFOPLIST_FILE = DanStory/Info.plist;
