@@ -20,6 +20,6 @@ protocol PhotosBusinessLogic {
     var photos: [Photo] { get set }
     var worker: PhotosWorkerLogic { get set }
     
-    func fetchPhotos(orderBy: OrderByFilter, page: Int)
-    func searchPhotos(searchTerm: String, page: Int)
+    func fetchPhotos(orderBy: OrderByFilter)
+    func fetchNextPhotos(page: Int)
 }

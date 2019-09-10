@@ -25,8 +25,8 @@ class PhotosViewModel: PhotosBusinessLogic {
     
     // MARK: - BusinessLogic
     
-    func fetchPhotos(orderBy: OrderByFilter, page: Int) {
-        worker.fetchPhotos(orderBy: orderBy, page: page) { result in
+    func fetchPhotos(orderBy: OrderByFilter) {
+        worker.fetchPhotos(orderBy: orderBy) { result in
             switch result {
             case .success(let photos):
                 self.photos = photos
@@ -37,15 +37,7 @@ class PhotosViewModel: PhotosBusinessLogic {
         }
     }
     
-    func searchPhotos(searchTerm: String, page: Int) {
-        worker.searchPhotos(searchTerm: searchTerm, page: page) { result in
-            switch result {
-            case .success(let photos):
-                self.photos = photos
-                self.view?.displayPhotos()
-            case .failure(let error):
-                self.view?.displayError(error.localizedDescription)
-            }
-        }
-    }   
+    func fetchNextPhotos(page: Int) {
+        
+    }
 }

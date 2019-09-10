@@ -16,6 +16,10 @@
 		CE5F985A2327A7E6008385EC /* PhotosWorkerLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F98592327A7E6008385EC /* PhotosWorkerLogic.swift */; };
 		CE5F985C2327B0D4008385EC /* PhotosWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F985B2327B0D4008385EC /* PhotosWorker.swift */; };
 		CE5F985E2327B451008385EC /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F985D2327B451008385EC /* PhotosViewModel.swift */; };
+		CE5F98642327C31E008385EC /* SearchPhotosApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F98632327C31E008385EC /* SearchPhotosApi.swift */; };
+		CE5F98662327C331008385EC /* SearchPhotosNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F98652327C331008385EC /* SearchPhotosNetworkManager.swift */; };
+		CE5F986C2327C55E008385EC /* SearchPhotosWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F986B2327C55E008385EC /* SearchPhotosWorker.swift */; };
+		CE5F986E2327C67B008385EC /* SearchPhotosProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F986D2327C67B008385EC /* SearchPhotosProtocols.swift */; };
 		CE80298C2326176400D4AEFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80298B2326176400D4AEFA /* AppDelegate.swift */; };
 		CE802993232617EB00D4AEFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE802992232617EB00D4AEFA /* Assets.xcassets */; };
 		CE8029A023262F9400D4AEFA /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80299F23262F9400D4AEFA /* UIView + Extensions.swift */; };
@@ -45,6 +49,10 @@
 		CE5F98592327A7E6008385EC /* PhotosWorkerLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosWorkerLogic.swift; sourceTree = "<group>"; };
 		CE5F985B2327B0D4008385EC /* PhotosWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosWorker.swift; sourceTree = "<group>"; };
 		CE5F985D2327B451008385EC /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
+		CE5F98632327C31E008385EC /* SearchPhotosApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotosApi.swift; sourceTree = "<group>"; };
+		CE5F98652327C331008385EC /* SearchPhotosNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotosNetworkManager.swift; sourceTree = "<group>"; };
+		CE5F986B2327C55E008385EC /* SearchPhotosWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotosWorker.swift; sourceTree = "<group>"; };
+		CE5F986D2327C67B008385EC /* SearchPhotosProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotosProtocols.swift; sourceTree = "<group>"; };
 		CE8029882326176400D4AEFA /* DanStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DanStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE80298B2326176400D4AEFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE802992232617EB00D4AEFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +113,24 @@
 			path = PhotosNetwork;
 			sourceTree = "<group>";
 		};
+		CE5F98612327C232008385EC /* SearchPhotos */ = {
+			isa = PBXGroup;
+			children = (
+				CE5F986B2327C55E008385EC /* SearchPhotosWorker.swift */,
+				CE5F986D2327C67B008385EC /* SearchPhotosProtocols.swift */,
+			);
+			path = SearchPhotos;
+			sourceTree = "<group>";
+		};
+		CE5F98622327C305008385EC /* SearchPhotosNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				CE5F98632327C31E008385EC /* SearchPhotosApi.swift */,
+				CE5F98652327C331008385EC /* SearchPhotosNetworkManager.swift */,
+			);
+			path = SearchPhotosNetwork;
+			sourceTree = "<group>";
+		};
 		CE80297F2326176400D4AEFA = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +183,7 @@
 		CE8029A62326439F00D4AEFA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				CE5F98622327C305008385EC /* SearchPhotosNetwork */,
 				CE5F984C23276D06008385EC /* PhotosNetwork */,
 				CE8029A8232643BC00D4AEFA /* Encoding */,
 				CE8029A7232643B000D4AEFA /* Service */,
@@ -201,6 +228,7 @@
 		CE8029C023265A6E00D4AEFA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CE5F98612327C232008385EC /* SearchPhotos */,
 				CE90A2112327632100AF9FE5 /* Photos */,
 			);
 			path = Scenes;
@@ -296,15 +324,18 @@
 				CE8029B9232645F700D4AEFA /* NetworkManager.swift in Sources */,
 				CE8029AE2326441100D4AEFA /* HTTPTask.swift in Sources */,
 				CE8029B02326442A00D4AEFA /* NetworkError.swift in Sources */,
+				CE5F98642327C31E008385EC /* SearchPhotosApi.swift in Sources */,
 				CE8029B42326445700D4AEFA /* Router.swift in Sources */,
 				CE5F985E2327B451008385EC /* PhotosViewModel.swift in Sources */,
 				CE8029BD2326463800D4AEFA /* URLParameterEncoder.swift in Sources */,
 				CE5F985A2327A7E6008385EC /* PhotosWorkerLogic.swift in Sources */,
 				CE8029BF2326464F00D4AEFA /* JSONParameterEncoder.swift in Sources */,
+				CE5F986C2327C55E008385EC /* SearchPhotosWorker.swift in Sources */,
 				CE8029A5232642C800D4AEFA /* AppCoordinator.swift in Sources */,
 				CE2A111723265BB70079145F /* Constants.swift in Sources */,
 				CE5F985623279F81008385EC /* User.swift in Sources */,
 				CE8029A023262F9400D4AEFA /* UIView + Extensions.swift in Sources */,
+				CE5F986E2327C67B008385EC /* SearchPhotosProtocols.swift in Sources */,
 				CE8029AC232643F500D4AEFA /* EndPointType.swift in Sources */,
 				CE8029BB2326461900D4AEFA /* ParameterEncoding.swift in Sources */,
 				CE80298C2326176400D4AEFA /* AppDelegate.swift in Sources */,
@@ -316,6 +347,7 @@
 				CE8029B7232645A500D4AEFA /* DSError.swift in Sources */,
 				CE5F98582327A251008385EC /* PhotosNetworkManager.swift in Sources */,
 				CE5F98522327974D008385EC /* CustomCollectionViewLayout.swift in Sources */,
+				CE5F98662327C331008385EC /* SearchPhotosNetworkManager.swift in Sources */,
 				CE5F984E23276D35008385EC /* PhotosApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

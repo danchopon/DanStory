@@ -1,5 +1,5 @@
 //
-//  PhotosApi.swift
+//  SearchPhotosApi.swift
 //  DanStory
 //
 //  Created by Daniyar Erkinov on 9/10/19.
@@ -8,26 +8,26 @@
 
 import Foundation
 
-public enum PhotosApi {
-    case photoList(Parameters)
+public enum SearchPhotosApi {
+    case search(Parameters)
     case next(Parameters)
 }
 
-extension PhotosApi: EndPointType {
+extension SearchPhotosApi: EndPointType {
     var constructedURL: String {
         return Constants.Network.unsplashBaseUrl
     }
     
     var path: String {
         switch self {
-        case .photoList, .next:
-            return "/photos"
+        case .search, .next:
+            return "/search/photos"
         }
     }
     
     var httpMethod: HTTPMethod {
         switch self {
-        case .photoList, .next:
+        case .search, .next:
             return .get
         }
     }
@@ -40,10 +40,10 @@ extension PhotosApi: EndPointType {
     
     var task: HTTPTask {
         switch self {
-        case .photoList(let photoParameters):
-            return .requestParameters(bodyParameters: nil, urlParameters: photoParameters)
-        case .next(let photoParameters):
-            return .requestParameters(bodyParameters: nil, urlParameters: photoParameters)
+        case .search(let urlSearchParameters):
+            return .requestParameters(bodyParameters: nil, urlParameters: urlSearchParameters)
+        case .next(let urlSearchParameters):
+            return .requestParameters(bodyParameters: nil, urlParameters: urlSearchParameters)
         }
     }
 }

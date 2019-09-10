@@ -1,5 +1,5 @@
 //
-//  PhotosNetworkManager.swift
+//  SearchPhotosNetworkManager.swift
 //  DanStory
 //
 //  Created by Daniyar Erkinov on 9/10/19.
@@ -8,18 +8,18 @@
 
 import Foundation
 
-class PhotosNetworkManager: NetworkManager {
-    private let router = Router<PhotosApi>()
+class SearchPhotosNetworkManager: NetworkManager {
+    private let router = Router<SearchPhotosApi>()
     
-    func fetchPhotos(with params: Parameters, completion: @escaping (Result<[Photo], DSError>) -> Void) {
-        fetch(endPoint: .photoList(params), completion: completion)
+    func searchPhotos(with params: Parameters, completion: @escaping (Result<[Photo], DSError>) -> Void) {
+        fetch(endPoint: .search(params), completion: completion)
     }
     
     func fetchNextPhotos(with params: Parameters, completion: @escaping (Result<[Photo], DSError>) -> Void) {
         fetch(endPoint: .next(params), completion: completion)
     }
     
-    private func fetch(endPoint: PhotosApi, completion: @escaping (Result<[Photo], DSError>) -> Void) {
+    private func fetch(endPoint: SearchPhotosApi, completion: @escaping (Result<[Photo], DSError>) -> Void) {
         router.request(endPoint) { data, response, error in
             if error != nil {
                 completion(.failure(.network))

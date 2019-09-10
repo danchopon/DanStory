@@ -15,6 +15,6 @@ enum OrderByFilter: String {
 }
 
 protocol PhotosWorkerLogic {
-    func fetchPhotos(orderBy: OrderByFilter, page: Int, completion: @escaping (Result<[Photo], DSError>) -> Void)
-    func searchPhotos(searchTerm: String, page: Int, completion: @escaping (Result<[Photo], DSError>) -> Void)
+    func fetchPhotos(orderBy: OrderByFilter, completion: @escaping (Result<[Photo], DSError>) -> Void)
+    func fetchNextPhotos(orderBy: OrderByFilter, page: Int, completion: @escaping (Result<[Photo], DSError>) -> Void)
 }

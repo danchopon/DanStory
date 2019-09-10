@@ -11,10 +11,10 @@ import UIKit
 class PhotosWorker: PhotosWorkerLogic {
     private let photosNetworkManager = PhotosNetworkManager()
     
-    func fetchPhotos(orderBy: OrderByFilter, page: Int, completion: @escaping (Result<[Photo], DSError>) -> Void) {
+    func fetchPhotos(orderBy: OrderByFilter, completion: @escaping (Result<[Photo], DSError>) -> Void) {
         DispatchQueue.global(qos: .background).async {
             let parameters: Parameters = [
-                "page": page,
+                "page": 1,
                 "per_page": 15,
                 "order_by": orderBy
             ]
@@ -26,14 +26,14 @@ class PhotosWorker: PhotosWorkerLogic {
         }
     }
     
-    func searchPhotos(searchTerm: String, page: Int, completion: @escaping (Result<[Photo], DSError>) -> Void) {
+    func fetchNextPhotos(orderBy: OrderByFilter, page: Int, completion: @escaping (Result<[Photo], DSError>) -> Void) {
         DispatchQueue.global(qos: .background).async {
             let parameters: Parameters = [
-                "query": searchTerm,
                 "page": page,
-                "per_page": 15
+                "per_page": 15,
+                "order_by": orderBy
             ]
-            self.photosNetworkManager.searchPhotos(with: parameters, completion: { result in
+            self.photosNetworkManager.fetchPhotos(with: parameters, completion: { result in
                 DispatchQueue.main.async {
                     completion(result)
                 }
