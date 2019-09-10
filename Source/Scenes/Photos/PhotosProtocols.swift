@@ -10,8 +10,16 @@ import Foundation
 
 protocol PhotosDisplayLogic {
     var viewModel: PhotosBusinessLogic { get set }
+    
+    func displayPhotos()
+    func displayError(_ error: String)
 }
 
 protocol PhotosBusinessLogic {
     var view: PhotosDisplayLogic? { get set }
+    var photos: [Photo] { get set }
+    var worker: PhotosWorkerLogic { get set }
+    
+    func fetchPhotos(orderBy: OrderByFilter, page: Int)
+    func searchPhotos(searchTerm: String, page: Int)
 }
