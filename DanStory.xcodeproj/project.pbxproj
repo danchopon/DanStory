@@ -15,6 +15,7 @@
 		CE5F98582327A251008385EC /* PhotosNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F98572327A251008385EC /* PhotosNetworkManager.swift */; };
 		CE5F985A2327A7E6008385EC /* PhotosWorkerLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F98592327A7E6008385EC /* PhotosWorkerLogic.swift */; };
 		CE5F985C2327B0D4008385EC /* PhotosWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F985B2327B0D4008385EC /* PhotosWorker.swift */; };
+		CE5F985E2327B451008385EC /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F985D2327B451008385EC /* PhotosViewModel.swift */; };
 		CE80298C2326176400D4AEFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80298B2326176400D4AEFA /* AppDelegate.swift */; };
 		CE802993232617EB00D4AEFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE802992232617EB00D4AEFA /* Assets.xcassets */; };
 		CE8029A023262F9400D4AEFA /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80299F23262F9400D4AEFA /* UIView + Extensions.swift */; };
@@ -43,6 +44,7 @@
 		CE5F98572327A251008385EC /* PhotosNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosNetworkManager.swift; sourceTree = "<group>"; };
 		CE5F98592327A7E6008385EC /* PhotosWorkerLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosWorkerLogic.swift; sourceTree = "<group>"; };
 		CE5F985B2327B0D4008385EC /* PhotosWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosWorker.swift; sourceTree = "<group>"; };
+		CE5F985D2327B451008385EC /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
 		CE8029882326176400D4AEFA /* DanStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DanStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE80298B2326176400D4AEFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE802992232617EB00D4AEFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				CE90A212232763A100AF9FE5 /* PhotosProtocols.swift */,
+				CE5F985D2327B451008385EC /* PhotosViewModel.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				CE8029AE2326441100D4AEFA /* HTTPTask.swift in Sources */,
 				CE8029B02326442A00D4AEFA /* NetworkError.swift in Sources */,
 				CE8029B42326445700D4AEFA /* Router.swift in Sources */,
+				CE5F985E2327B451008385EC /* PhotosViewModel.swift in Sources */,
 				CE8029BD2326463800D4AEFA /* URLParameterEncoder.swift in Sources */,
 				CE5F985A2327A7E6008385EC /* PhotosWorkerLogic.swift in Sources */,
 				CE8029BF2326464F00D4AEFA /* JSONParameterEncoder.swift in Sources */,

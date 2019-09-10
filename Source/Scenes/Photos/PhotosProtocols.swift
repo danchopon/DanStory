@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol PhotosDisplayLogic {
+protocol PhotosDisplayLogic: class {
     var viewModel: PhotosBusinessLogic { get set }
     
     func displayPhotos()
