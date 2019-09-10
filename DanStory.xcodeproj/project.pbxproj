@@ -13,6 +13,7 @@
 		CE5F985423279BBF008385EC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F985323279BBF008385EC /* Photo.swift */; };
 		CE5F985623279F81008385EC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F985523279F81008385EC /* User.swift */; };
 		CE5F98582327A251008385EC /* PhotosNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F98572327A251008385EC /* PhotosNetworkManager.swift */; };
+		CE5F985A2327A7E6008385EC /* PhotosWorkerLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F98592327A7E6008385EC /* PhotosWorkerLogic.swift */; };
 		CE80298C2326176400D4AEFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80298B2326176400D4AEFA /* AppDelegate.swift */; };
 		CE802993232617EB00D4AEFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE802992232617EB00D4AEFA /* Assets.xcassets */; };
 		CE8029A023262F9400D4AEFA /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80299F23262F9400D4AEFA /* UIView + Extensions.swift */; };
@@ -39,6 +40,7 @@
 		CE5F985323279BBF008385EC /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		CE5F985523279F81008385EC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CE5F98572327A251008385EC /* PhotosNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosNetworkManager.swift; sourceTree = "<group>"; };
+		CE5F98592327A7E6008385EC /* PhotosWorkerLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosWorkerLogic.swift; sourceTree = "<group>"; };
 		CE8029882326176400D4AEFA /* DanStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DanStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE80298B2326176400D4AEFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE802992232617EB00D4AEFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		CE5F984B23276CD7008385EC /* Photos */ = {
 			isa = PBXGroup;
 			children = (
+				CE5F98592327A7E6008385EC /* PhotosWorkerLogic.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				CE8029B02326442A00D4AEFA /* NetworkError.swift in Sources */,
 				CE8029B42326445700D4AEFA /* Router.swift in Sources */,
 				CE8029BD2326463800D4AEFA /* URLParameterEncoder.swift in Sources */,
+				CE5F985A2327A7E6008385EC /* PhotosWorkerLogic.swift in Sources */,
 				CE8029BF2326464F00D4AEFA /* JSONParameterEncoder.swift in Sources */,
 				CE8029A5232642C800D4AEFA /* AppCoordinator.swift in Sources */,
 				CE2A111723265BB70079145F /* Constants.swift in Sources */,
