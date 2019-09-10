@@ -15,6 +15,7 @@ struct Photo: Decodable {
     let likes: Int
     let description: String
     let urls: [URLKind.RawValue: String]
+    let user: User
     
     enum URLKind: String {
         case raw
