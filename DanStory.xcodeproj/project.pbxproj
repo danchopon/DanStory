@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65650FEAB74612CBF04F3540 /* Pods_DanStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C039FCEDD844F9197CAFD9B /* Pods_DanStory.framework */; };
+		CE001C102328B7560024782A /* PhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE001C0F2328B7560024782A /* PhotosCell.swift */; };
 		CE2A111723265BB70079145F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A111623265BB70079145F /* Constants.swift */; };
 		CE2A111B23266FCE0079145F /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A111A23266FCE0079145F /* Secrets.swift */; };
 		CE5F984E23276D35008385EC /* PhotosApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F984D23276D35008385EC /* PhotosApi.swift */; };
@@ -41,6 +43,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56563A2E627D4E669441838A /* Pods-DanStory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanStory.debug.xcconfig"; path = "Target Support Files/Pods-DanStory/Pods-DanStory.debug.xcconfig"; sourceTree = "<group>"; };
+		5C039FCEDD844F9197CAFD9B /* Pods_DanStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DanStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F429C59BC8185BC6A074E14 /* Pods-DanStory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanStory.release.xcconfig"; path = "Target Support Files/Pods-DanStory/Pods-DanStory.release.xcconfig"; sourceTree = "<group>"; };
+		CE001C0F2328B7560024782A /* PhotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCell.swift; sourceTree = "<group>"; };
 		CE2A111623265BB70079145F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE2A111A23266FCE0079145F /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		CE5F984D23276D35008385EC /* PhotosApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosApi.swift; sourceTree = "<group>"; };
@@ -81,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65650FEAB74612CBF04F3540 /* Pods_DanStory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +138,8 @@
 				CE80299D23262F3A00D4AEFA /* Source */,
 				CE80298A2326176400D4AEFA /* DanStory */,
 				CE8029892326176400D4AEFA /* Products */,
+				FC6D158B649344ED49242604 /* Pods */,
+				F0CA3612078DD795BA57F5C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,6 +244,7 @@
 				CE90A212232763A100AF9FE5 /* PhotosProtocols.swift */,
 				CE5F985D2327B451008385EC /* PhotosViewModel.swift */,
 				CE5F985F2327B63E008385EC /* PhotosViewController.swift */,
+				CE001C0F2328B7560024782A /* PhotosCell.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -246,6 +256,24 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		F0CA3612078DD795BA57F5C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C039FCEDD844F9197CAFD9B /* Pods_DanStory.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC6D158B649344ED49242604 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56563A2E627D4E669441838A /* Pods-DanStory.debug.xcconfig */,
+				5F429C59BC8185BC6A074E14 /* Pods-DanStory.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -253,9 +281,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE80299A232617EB00D4AEFA /* Build configuration list for PBXNativeTarget "DanStory" */;
 			buildPhases = (
+				CEC4E56AD4A8C717E8BD00A2 /* [CP] Check Pods Manifest.lock */,
 				CE8029842326176400D4AEFA /* Sources */,
 				CE8029852326176400D4AEFA /* Frameworks */,
 				CE8029862326176400D4AEFA /* Resources */,
+				C3ACA0F317794B65BEB1B445 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -310,11 +340,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C3ACA0F317794B65BEB1B445 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DanStory/Pods-DanStory-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DanStory/Pods-DanStory-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DanStory/Pods-DanStory-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEC4E56AD4A8C717E8BD00A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DanStory-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE8029842326176400D4AEFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE001C102328B7560024782A /* PhotosCell.swift in Sources */,
 				CE5F98602327B63E008385EC /* PhotosViewController.swift in Sources */,
 				CE5F985423279BBF008385EC /* Photo.swift in Sources */,
 				CE8029B9232645F700D4AEFA /* NetworkManager.swift in Sources */,
@@ -469,6 +542,7 @@
 		};
 		CE80299B232617EB00D4AEFA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56563A2E627D4E669441838A /* Pods-DanStory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -488,6 +562,7 @@
 		};
 		CE80299C232617EB00D4AEFA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F429C59BC8185BC6A074E14 /* Pods-DanStory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

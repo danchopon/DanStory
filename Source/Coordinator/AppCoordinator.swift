@@ -14,7 +14,7 @@ class AppCoordinator: Coordinator {
     let window: UIWindow?
     
     lazy var rootViewController: UINavigationController = {
-        return UINavigationController(rootViewController: UIViewController())
+        return UINavigationController(rootViewController: PhotosViewController.instance())
     }()
     
     // MARK: - Coordinator

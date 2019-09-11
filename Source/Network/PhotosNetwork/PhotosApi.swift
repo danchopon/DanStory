@@ -41,7 +41,7 @@ extension PhotosApi: EndPointType {
     var task: HTTPTask {
         switch self {
         case .photoList(let photoParameters):
-            return .requestParameters(bodyParameters: nil, urlParameters: photoParameters)
+            return .requestParametersAndHeaders(bodyParameters: nil, urlParameters: photoParameters, additionalHeaders: headers)
         case .next(let photoParameters):
             return .requestParameters(bodyParameters: nil, urlParameters: photoParameters)
         }

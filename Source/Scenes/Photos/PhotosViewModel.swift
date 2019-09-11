@@ -37,6 +37,10 @@ class PhotosViewModel: PhotosBusinessLogic {
         }
     }
     
+    func getPhoto(for index: Int) -> Photo {
+        return photos[index]
+    }
+    
     func fetchNextPhotos(page: Int) {
         
     }

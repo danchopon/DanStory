@@ -13,9 +13,9 @@ struct Photo: Decodable {
     let width: Int
     let height: Int
     let likes: Int
-    let description: String
+    let description: String?
     let urls: [URLKind.RawValue: String]
-    let user: User
+    let user: User?
     
     enum URLKind: String {
         case raw

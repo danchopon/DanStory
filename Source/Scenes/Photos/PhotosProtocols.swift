@@ -22,6 +22,7 @@ protocol PhotosBusinessLogic {
     
     func fetchPhotos(orderBy: OrderByFilter)
     func fetchNextPhotos(page: Int)
+    func getPhoto(for index: Int) -> Photo
 }
 
 enum OrderByFilter: String {

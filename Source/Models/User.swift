@@ -9,7 +9,8 @@
 import Foundation
 
 struct User: Codable {
-    let id, username, name, bio: String
+    let id, username, name: String
+    let bio: String?
     let profileImage: ProfileImage
     
     enum CodingKeys: String, CodingKey {

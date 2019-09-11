@@ -20,5 +20,7 @@ DerivedData
 !default.xcworkspace
 *.xcuserdata
 
+Pods/
+
 # Secret Keys
 /Source/Common/Secrets.swift
