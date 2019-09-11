@@ -20,6 +20,7 @@ class PhotosViewController: UIViewController, PhotosDisplayLogic {
     // MARK: - Properties
     
     var viewModel: PhotosBusinessLogic
+    var numberOfColumns: Int = 2
     
     // MARK: - Views
     
@@ -35,13 +36,12 @@ class PhotosViewController: UIViewController, PhotosDisplayLogic {
         return refresh
     }()
     
-    lazy var flowLayout: UICollectionViewLayout = {
+    lazy var flowLayout: CustomCollectionViewLayout = {
         let flowLayout = CustomCollectionViewLayout()
         flowLayout.delegate = self
-        flowLayout.numberOfColumns = 2
+        flowLayout.numberOfColumns = numberOfColumns
         return flowLayout
     }()
-    
     
     private lazy var photosList: UICollectionView = {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
