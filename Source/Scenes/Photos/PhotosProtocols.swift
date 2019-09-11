@@ -23,3 +23,16 @@ protocol PhotosBusinessLogic {
     func fetchPhotos(orderBy: OrderByFilter)
     func fetchNextPhotos(page: Int)
 }
+
+enum OrderByFilter: String {
+    case latest, oldest, popular
+    
+    var description: String {
+        return String(describing: self)
+    }
+}
+
+protocol PhotosWorkerLogic {
+    func fetchPhotos(orderBy: OrderByFilter, completion: @escaping (Result<[Photo], DSError>) -> Void)
+    func fetchNextPhotos(orderBy: OrderByFilter, page: Int, completion: @escaping (Result<[Photo], DSError>) -> Void)
+}
