@@ -20,7 +20,7 @@ class PhotosViewController: UIViewController, PhotosDisplayLogic {
     // MARK: - Properties
     
     var viewModel: PhotosBusinessLogic
-    var numberOfColumns: Int = 2
+    private var numberOfColumns: Int = 1
     
     // MARK: - Views
     
@@ -30,13 +30,17 @@ class PhotosViewController: UIViewController, PhotosDisplayLogic {
         return view
     }()
     
+    private lazy var addBarButtonItem: UIBarButtonItem = {
+        return UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonTapped))
+    }()
+    
     private lazy var refreshControl: UIRefreshControl = {
         let refresh = UIRefreshControl()
         refresh.addTarget(self, action: #selector(refreshTable), for: .valueChanged)
         return refresh
     }()
     
-    lazy var flowLayout: CustomCollectionViewLayout = {
+    private lazy var flowLayout: CustomCollectionViewLayout = {
         let flowLayout = CustomCollectionViewLayout()
         flowLayout.delegate = self
         flowLayout.numberOfColumns = numberOfColumns
@@ -94,12 +98,14 @@ class PhotosViewController: UIViewController, PhotosDisplayLogic {
         titleLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         titleLabel.textColor = #colorLiteral(red: 0.5019607843, green: 0.4980392157, blue: 0.4980392157, alpha: 1)
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: titleLabel)
+        
+        navigationItem.rightBarButtonItem = addBarButtonItem
     }
     
     private func loadPhotos() {
         loadingView.isHidden = false
         loadingView.startAnimating()
-        viewModel.fetchPhotos(orderBy: .latest)
+        viewModel.fetchPhotos()
     }
     
     func displayPhotos() {
@@ -107,6 +113,28 @@ class PhotosViewController: UIViewController, PhotosDisplayLogic {
         loadingView.stopAnimating()
         loadingView.isHidden = true
         photosList.reloadData()
+    }
+    
+    func displayNextPhotos(start: Int, end: Int) {
+        var insertingIndexes = [IndexPath]()
+        for index in start..<end {
+            insertingIndexes.append(IndexPath(row: index, section: 0))
+        }
+        
+        photosList.performBatchUpdates({
+            UIView.setAnimationsEnabled(false)
+            photosList.insertItems(at: insertingIndexes)
+            flowLayout.prepareNew(start: start, end: viewModel.photos.count)
+            photosList.collectionViewLayout.invalidateLayout()
+            photosList.reloadData()
+        }, completion: { _ in
+            UIView.setAnimationsEnabled(true)
+        })
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        photosList.collectionViewLayout.invalidateLayout()
     }
     
     func displayError(_ error: String) {
@@ -128,7 +156,19 @@ class PhotosViewController: UIViewController, PhotosDisplayLogic {
     }
     
     @objc private func refreshTable() {
-        viewModel.fetchPhotos(orderBy: .latest)
+        viewModel.fetchPhotos()
+    }
+    
+    @objc private func addBarButtonTapped() {
+    }
+    
+    private func changeLayout() {
+        photosList.performBatchUpdates({
+            if self.viewModel.photos.count > 0 {
+                flowLayout.numberOfColumns = 4
+                self.photosList.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: false)
+            }
+        }, completion: nil)
     }
 }
 
@@ -144,6 +184,12 @@ extension PhotosViewController: UICollectionViewDelegateFlowLayout & UICollectio
         let photo = viewModel.getPhoto(for: indexPath.item)
         cell.onBind(photo)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.photos.count - 1 {
+            viewModel.fetchNextPhotos()
+        }
     }
 }
 

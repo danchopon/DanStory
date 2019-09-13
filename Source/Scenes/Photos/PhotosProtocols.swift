@@ -12,6 +12,7 @@ protocol PhotosDisplayLogic: class {
     var viewModel: PhotosBusinessLogic { get set }
     
     func displayPhotos()
+    func displayNextPhotos(start: Int, end: Int)
     func displayError(_ error: String)
 }
 
@@ -19,10 +20,11 @@ protocol PhotosBusinessLogic {
     var view: PhotosDisplayLogic? { get set }
     var photos: [Photo] { get set }
     var worker: PhotosWorkerLogic { get set }
+    var orderBy: OrderByFilter { get set }
     
-    func fetchPhotos(orderBy: OrderByFilter)
-    func fetchNextPhotos(page: Int)
+    func fetchPhotos()
     func getPhoto(for index: Int) -> Photo
+    func fetchNextPhotos()
 }
 
 enum OrderByFilter: String {
