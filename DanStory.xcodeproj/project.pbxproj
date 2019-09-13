@@ -40,6 +40,7 @@
 		CE8029BD2326463800D4AEFA /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8029BC2326463800D4AEFA /* URLParameterEncoder.swift */; };
 		CE8029BF2326464F00D4AEFA /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8029BE2326464F00D4AEFA /* JSONParameterEncoder.swift */; };
 		CE90A213232763A100AF9FE5 /* PhotosProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90A212232763A100AF9FE5 /* PhotosProtocols.swift */; };
+		CEC740E6232B94F300756FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC740E5232B94F300756FB8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		CE8029BC2326463800D4AEFA /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
 		CE8029BE2326464F00D4AEFA /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		CE90A212232763A100AF9FE5 /* PhotosProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosProtocols.swift; sourceTree = "<group>"; };
+		CEC740E5232B94F300756FB8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		CE80298A2326176400D4AEFA /* DanStory */ = {
 			isa = PBXGroup;
 			children = (
+				CEC740E5232B94F300756FB8 /* LaunchScreen.storyboard */,
 				CE80298B2326176400D4AEFA /* AppDelegate.swift */,
 				CE802992232617EB00D4AEFA /* Assets.xcassets */,
 				CE802997232617EB00D4AEFA /* Info.plist */,
@@ -335,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE802993232617EB00D4AEFA /* Assets.xcassets in Resources */,
+				CEC740E6232B94F300756FB8 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
