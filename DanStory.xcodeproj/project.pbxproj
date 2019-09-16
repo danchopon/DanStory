@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,6 +41,10 @@
 		CE8029BF2326464F00D4AEFA /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8029BE2326464F00D4AEFA /* JSONParameterEncoder.swift */; };
 		CE90A213232763A100AF9FE5 /* PhotosProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90A212232763A100AF9FE5 /* PhotosProtocols.swift */; };
 		CEC740E6232B94F300756FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC740E5232B94F300756FB8 /* LaunchScreen.storyboard */; };
+		CEE73CBE232A6623003D2449 /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73CBD232A6623003D2449 /* SlideMenu.swift */; };
+		CEE73CC0232A6D08003D2449 /* FilterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73CBF232A6D08003D2449 /* FilterViewCell.swift */; };
+		CEFC3413232F553400399875 /* FilterDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3412232F553400399875 /* FilterDataProvider.swift */; };
+		CEFC3424232F89FA00399875 /* FilterViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3423232F89FA00399875 /* FilterViewSectionHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +86,10 @@
 		CE8029BE2326464F00D4AEFA /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		CE90A212232763A100AF9FE5 /* PhotosProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosProtocols.swift; sourceTree = "<group>"; };
 		CEC740E5232B94F300756FB8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEE73CBD232A6623003D2449 /* SlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
+		CEE73CBF232A6D08003D2449 /* FilterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewCell.swift; sourceTree = "<group>"; };
+		CEFC3412232F553400399875 /* FilterDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDataProvider.swift; sourceTree = "<group>"; };
+		CEFC3423232F89FA00399875 /* FilterViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewSectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +175,7 @@
 		CE80299D23262F3A00D4AEFA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CEE73CBC232A6602003D2449 /* Views */,
 				CE90A21423276C4500AF9FE5 /* Services */,
 				CE2A111523265B850079145F /* Common */,
 				CE8029C023265A6E00D4AEFA /* Scenes */,
@@ -248,6 +257,7 @@
 				CE5F985D2327B451008385EC /* PhotosViewModel.swift */,
 				CE5F985F2327B63E008385EC /* PhotosViewController.swift */,
 				CE001C0F2328B7560024782A /* PhotosCell.swift */,
+				CEFC3412232F553400399875 /* FilterDataProvider.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -257,6 +267,16 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CEE73CBC232A6602003D2449 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEE73CBD232A6623003D2449 /* SlideMenu.swift */,
+				CEE73CBF232A6D08003D2449 /* FilterViewCell.swift */,
+				CEFC3423232F89FA00399875 /* FilterViewSectionHeader.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F0CA3612078DD795BA57F5C0 /* Frameworks */ = {
@@ -273,7 +293,6 @@
 				56563A2E627D4E669441838A /* Pods-DanStory.debug.xcconfig */,
 				5F429C59BC8185BC6A074E14 /* Pods-DanStory.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -395,18 +414,22 @@
 				CE5F98602327B63E008385EC /* PhotosViewController.swift in Sources */,
 				CE5F985423279BBF008385EC /* Photo.swift in Sources */,
 				CE8029B9232645F700D4AEFA /* NetworkManager.swift in Sources */,
+				CEFC3413232F553400399875 /* FilterDataProvider.swift in Sources */,
 				CE8029AE2326441100D4AEFA /* HTTPTask.swift in Sources */,
 				CE8029B02326442A00D4AEFA /* NetworkError.swift in Sources */,
 				CE5F98642327C31E008385EC /* SearchPhotosApi.swift in Sources */,
 				CE8029B42326445700D4AEFA /* Router.swift in Sources */,
+				CEE73CC0232A6D08003D2449 /* FilterViewCell.swift in Sources */,
 				CE5F985E2327B451008385EC /* PhotosViewModel.swift in Sources */,
 				CE8029BD2326463800D4AEFA /* URLParameterEncoder.swift in Sources */,
 				CE2A111B23266FCE0079145F /* Secrets.swift in Sources */,
 				CE8029BF2326464F00D4AEFA /* JSONParameterEncoder.swift in Sources */,
 				CE5F986C2327C55E008385EC /* SearchPhotosWorker.swift in Sources */,
 				CE8029A5232642C800D4AEFA /* AppCoordinator.swift in Sources */,
+				CEFC3424232F89FA00399875 /* FilterViewSectionHeader.swift in Sources */,
 				CE2A111723265BB70079145F /* Constants.swift in Sources */,
 				CE5F985623279F81008385EC /* User.swift in Sources */,
+				CEE73CBE232A6623003D2449 /* SlideMenu.swift in Sources */,
 				CE8029A023262F9400D4AEFA /* UIView + Extensions.swift in Sources */,
 				CE5F986E2327C67B008385EC /* SearchPhotosProtocols.swift in Sources */,
 				CE8029AC232643F500D4AEFA /* EndPointType.swift in Sources */,

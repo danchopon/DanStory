@@ -27,11 +27,11 @@ protocol PhotosBusinessLogic {
     func fetchNextPhotos()
 }
 
-enum OrderByFilter: String {
+enum OrderByFilter: String, CaseIterable {
     case latest, oldest, popular
     
     var description: String {
-        return String(describing: self)
+        return String(describing: self.rawValue)
     }
 }
 

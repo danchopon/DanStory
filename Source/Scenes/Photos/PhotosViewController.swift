@@ -58,6 +58,9 @@ class PhotosViewController: UIViewController, PhotosDisplayLogic {
         return collectionView
     }()
     
+    
+    private let slideMenu = SlideMenu(dp: FilterDataProvider())
+    
     // MARK: - View Lifecycle
     
     init(viewModel: PhotosBusinessLogic) {
@@ -160,6 +163,7 @@ class PhotosViewController: UIViewController, PhotosDisplayLogic {
     }
     
     @objc private func addBarButtonTapped() {
+        slideMenu.showMenu()
     }
     
     private func changeLayout() {
