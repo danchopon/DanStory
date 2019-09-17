@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol FilterViewCellDelegate: class {
+    func didSelectItem(options: (String, Int))
+}
+
 class FilterViewCell: UICollectionViewCell {
     static let reuseID = String(describing: self)
+    
+    weak var delegate: FilterViewCellDelegate?
     
     override var isSelected: Bool {
         didSet {
@@ -46,10 +52,13 @@ class FilterViewCell: UICollectionViewCell {
     
     private func setupViews() {
         addSubview(nameLabel)
-        nameLabel.fillSuperview(padding: UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8))
+        nameLabel.fillSuperview(padding: UIEdgeInsets(top: 4, left: 8, bottom: 4, right: 8))
     }
     
-    func configure(text: String) {
+    func configure(text: String, isActive: Bool) {
         self.nameLabel.text = text
+        if isActive {
+            self.nameLabel.textColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1.0) /* #333333 */
+        }
     }
 }

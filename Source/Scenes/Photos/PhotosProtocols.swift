@@ -31,6 +31,17 @@ enum OrderByFilter: String, CaseIterable {
     case latest, oldest, popular
     
     var description: String {
+        switch self {
+        case .latest:
+            return "Latest"
+        case .oldest:
+            return "Oldest"
+        case .popular:
+            return "Popular"
+        }
+    }
+    
+    var option: String {
         return String(describing: self.rawValue)
     }
 }

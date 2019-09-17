@@ -43,7 +43,6 @@
 		CEC740E6232B94F300756FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC740E5232B94F300756FB8 /* LaunchScreen.storyboard */; };
 		CEE73CBE232A6623003D2449 /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73CBD232A6623003D2449 /* SlideMenu.swift */; };
 		CEE73CC0232A6D08003D2449 /* FilterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73CBF232A6D08003D2449 /* FilterViewCell.swift */; };
-		CEFC3413232F553400399875 /* FilterDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3412232F553400399875 /* FilterDataProvider.swift */; };
 		CEFC3424232F89FA00399875 /* FilterViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3423232F89FA00399875 /* FilterViewSectionHeader.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,7 +87,6 @@
 		CEC740E5232B94F300756FB8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEE73CBD232A6623003D2449 /* SlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
 		CEE73CBF232A6D08003D2449 /* FilterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewCell.swift; sourceTree = "<group>"; };
-		CEFC3412232F553400399875 /* FilterDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDataProvider.swift; sourceTree = "<group>"; };
 		CEFC3423232F89FA00399875 /* FilterViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewSectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,7 +255,6 @@
 				CE5F985D2327B451008385EC /* PhotosViewModel.swift */,
 				CE5F985F2327B63E008385EC /* PhotosViewController.swift */,
 				CE001C0F2328B7560024782A /* PhotosCell.swift */,
-				CEFC3412232F553400399875 /* FilterDataProvider.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -414,7 +411,6 @@
 				CE5F98602327B63E008385EC /* PhotosViewController.swift in Sources */,
 				CE5F985423279BBF008385EC /* Photo.swift in Sources */,
 				CE8029B9232645F700D4AEFA /* NetworkManager.swift in Sources */,
-				CEFC3413232F553400399875 /* FilterDataProvider.swift in Sources */,
 				CE8029AE2326441100D4AEFA /* HTTPTask.swift in Sources */,
 				CE8029B02326442A00D4AEFA /* NetworkError.swift in Sources */,
 				CE5F98642327C31E008385EC /* SearchPhotosApi.swift in Sources */,

@@ -24,6 +24,8 @@ class PhotosViewController: UIViewController, PhotosDisplayLogic {
     
     // MARK: - Views
     
+    private let slideMenu = SlideMenu()
+    
     private lazy var loadingView: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView(style: .whiteLarge)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -58,9 +60,6 @@ class PhotosViewController: UIViewController, PhotosDisplayLogic {
         return collectionView
     }()
     
-    
-    private let slideMenu = SlideMenu(dp: FilterDataProvider())
-    
     // MARK: - View Lifecycle
     
     init(viewModel: PhotosBusinessLogic) {
@@ -76,6 +75,7 @@ class PhotosViewController: UIViewController, PhotosDisplayLogic {
         super.viewDidLoad()
         setup()
         loadPhotos()
+        slideMenu.delegate = self
     }
     
     // MARK: Setup
@@ -165,15 +165,6 @@ class PhotosViewController: UIViewController, PhotosDisplayLogic {
     @objc private func addBarButtonTapped() {
         slideMenu.showMenu()
     }
-    
-    private func changeLayout() {
-        photosList.performBatchUpdates({
-            if self.viewModel.photos.count > 0 {
-                flowLayout.numberOfColumns = 4
-                self.photosList.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: false)
-            }
-        }, completion: nil)
-    }
 }
 
 extension PhotosViewController: UICollectionViewDelegateFlowLayout & UICollectionViewDataSource {
@@ -207,5 +198,25 @@ extension PhotosViewController: CustomLayoutDelegate {
         
         let newHeight = width * ratio
         return CGFloat(newHeight)
+    }
+}
+
+extension PhotosViewController: SlideMenuDelegate {
+    func changeOrderByFilter(orderBy: OrderByFilter) {
+        viewModel.orderBy = orderBy
+        loadPhotos()
+    }
+    
+    func changeNumberOfColumns(number: ViewLayoutSetting) {
+        if numberOfColumns == number.option { return }
+        numberOfColumns = number.option
+        UIView.animate(withDuration: 0.2) {
+            if self.viewModel.photos.count > 0 {
+                self.flowLayout.numberOfColumns = self.numberOfColumns
+                self.flowLayout.invalidateLayout()
+                self.photosList.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: false)
+                
+            }
+        }
     }
 }
