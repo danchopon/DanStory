@@ -40,6 +40,9 @@
 		CE8029BD2326463800D4AEFA /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8029BC2326463800D4AEFA /* URLParameterEncoder.swift */; };
 		CE8029BF2326464F00D4AEFA /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8029BE2326464F00D4AEFA /* JSONParameterEncoder.swift */; };
 		CE82F43023324CCB00635A68 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82F42F23324CCB00635A68 /* MenuItem.swift */; };
+		CE82F43223324FD400635A68 /* ContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82F43123324FD400635A68 /* ContextMenu.swift */; };
+		CE82F436233250E000635A68 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82F435233250E000635A68 /* UIColor+Extensions.swift */; };
+		CE82F4382332518F00635A68 /* ContextMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82F4372332518F00635A68 /* ContextMenuView.swift */; };
 		CE90A213232763A100AF9FE5 /* PhotosProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90A212232763A100AF9FE5 /* PhotosProtocols.swift */; };
 		CEC740E6232B94F300756FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC740E5232B94F300756FB8 /* LaunchScreen.storyboard */; };
 		CEE73CBE232A6623003D2449 /* FilterSlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73CBD232A6623003D2449 /* FilterSlideMenu.swift */; };
@@ -85,6 +88,9 @@
 		CE8029BC2326463800D4AEFA /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
 		CE8029BE2326464F00D4AEFA /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		CE82F42F23324CCB00635A68 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		CE82F43123324FD400635A68 /* ContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenu.swift; sourceTree = "<group>"; };
+		CE82F435233250E000635A68 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		CE82F4372332518F00635A68 /* ContextMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenuView.swift; sourceTree = "<group>"; };
 		CE90A212232763A100AF9FE5 /* PhotosProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosProtocols.swift; sourceTree = "<group>"; };
 		CEC740E5232B94F300756FB8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEE73CBD232A6623003D2449 /* FilterSlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSlideMenu.swift; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 				CE2A111623265BB70079145F /* Constants.swift */,
 				CE2A111A23266FCE0079145F /* Secrets.swift */,
 				CE5F98512327974D008385EC /* CustomCollectionViewLayout.swift */,
+				CE82F435233250E000635A68 /* UIColor+Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -263,6 +270,8 @@
 			isa = PBXGroup;
 			children = (
 				CE82F42F23324CCB00635A68 /* MenuItem.swift */,
+				CE82F43123324FD400635A68 /* ContextMenu.swift */,
+				CE82F4372332518F00635A68 /* ContextMenuView.swift */,
 			);
 			path = ContextMenu;
 			sourceTree = "<group>";
@@ -427,11 +436,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE001C102328B7560024782A /* PhotosCell.swift in Sources */,
+				CE82F436233250E000635A68 /* UIColor+Extensions.swift in Sources */,
 				CE5F98602327B63E008385EC /* PhotosViewController.swift in Sources */,
 				CE5F985423279BBF008385EC /* Photo.swift in Sources */,
 				CE8029B9232645F700D4AEFA /* NetworkManager.swift in Sources */,
 				CE8029AE2326441100D4AEFA /* HTTPTask.swift in Sources */,
 				CE8029B02326442A00D4AEFA /* NetworkError.swift in Sources */,
+				CE82F4382332518F00635A68 /* ContextMenuView.swift in Sources */,
 				CE5F98642327C31E008385EC /* SearchPhotosApi.swift in Sources */,
 				CE8029B42326445700D4AEFA /* Router.swift in Sources */,
 				CEE73CC0232A6D08003D2449 /* FilterViewCell.swift in Sources */,
@@ -448,6 +459,7 @@
 				CEE73CBE232A6623003D2449 /* FilterSlideMenu.swift in Sources */,
 				CE8029A023262F9400D4AEFA /* UIView + Extensions.swift in Sources */,
 				CE5F986E2327C67B008385EC /* SearchPhotosProtocols.swift in Sources */,
+				CE82F43223324FD400635A68 /* ContextMenu.swift in Sources */,
 				CE8029AC232643F500D4AEFA /* EndPointType.swift in Sources */,
 				CE8029BB2326461900D4AEFA /* ParameterEncoding.swift in Sources */,
 				CE80298C2326176400D4AEFA /* AppDelegate.swift in Sources */,

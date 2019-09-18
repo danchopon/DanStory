@@ -98,7 +98,7 @@ class PhotosViewController: UIViewController, PhotosDisplayLogic {
     private func setupNavigationBar() {
         let titleLabel = UILabel()
         titleLabel.text = "PHOTOS"
-        titleLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+        titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
         titleLabel.textColor = #colorLiteral(red: 0.5019607843, green: 0.4980392157, blue: 0.4980392157, alpha: 1)
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: titleLabel)
         
