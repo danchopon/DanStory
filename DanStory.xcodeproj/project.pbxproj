@@ -41,7 +41,7 @@
 		CE8029BF2326464F00D4AEFA /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8029BE2326464F00D4AEFA /* JSONParameterEncoder.swift */; };
 		CE90A213232763A100AF9FE5 /* PhotosProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90A212232763A100AF9FE5 /* PhotosProtocols.swift */; };
 		CEC740E6232B94F300756FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC740E5232B94F300756FB8 /* LaunchScreen.storyboard */; };
-		CEE73CBE232A6623003D2449 /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73CBD232A6623003D2449 /* SlideMenu.swift */; };
+		CEE73CBE232A6623003D2449 /* FilterSlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73CBD232A6623003D2449 /* FilterSlideMenu.swift */; };
 		CEE73CC0232A6D08003D2449 /* FilterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73CBF232A6D08003D2449 /* FilterViewCell.swift */; };
 		CEFC3424232F89FA00399875 /* FilterViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC3423232F89FA00399875 /* FilterViewSectionHeader.swift */; };
 /* End PBXBuildFile section */
@@ -85,7 +85,7 @@
 		CE8029BE2326464F00D4AEFA /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		CE90A212232763A100AF9FE5 /* PhotosProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosProtocols.swift; sourceTree = "<group>"; };
 		CEC740E5232B94F300756FB8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CEE73CBD232A6623003D2449 /* SlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
+		CEE73CBD232A6623003D2449 /* FilterSlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSlideMenu.swift; sourceTree = "<group>"; };
 		CEE73CBF232A6D08003D2449 /* FilterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewCell.swift; sourceTree = "<group>"; };
 		CEFC3423232F89FA00399875 /* FilterViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewSectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -247,6 +247,23 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		CE82F42D233244F400635A68 /* FilterSlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CEE73CBD232A6623003D2449 /* FilterSlideMenu.swift */,
+				CEE73CBF232A6D08003D2449 /* FilterViewCell.swift */,
+				CEFC3423232F89FA00399875 /* FilterViewSectionHeader.swift */,
+			);
+			path = FilterSlideMenu;
+			sourceTree = "<group>";
+		};
+		CE82F42E2332450F00635A68 /* ContextMenu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ContextMenu;
+			sourceTree = "<group>";
+		};
 		CE90A2112327632100AF9FE5 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,9 +286,8 @@
 		CEE73CBC232A6602003D2449 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CEE73CBD232A6623003D2449 /* SlideMenu.swift */,
-				CEE73CBF232A6D08003D2449 /* FilterViewCell.swift */,
-				CEFC3423232F89FA00399875 /* FilterViewSectionHeader.swift */,
+				CE82F42E2332450F00635A68 /* ContextMenu */,
+				CE82F42D233244F400635A68 /* FilterSlideMenu */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -425,7 +441,7 @@
 				CEFC3424232F89FA00399875 /* FilterViewSectionHeader.swift in Sources */,
 				CE2A111723265BB70079145F /* Constants.swift in Sources */,
 				CE5F985623279F81008385EC /* User.swift in Sources */,
-				CEE73CBE232A6623003D2449 /* SlideMenu.swift in Sources */,
+				CEE73CBE232A6623003D2449 /* FilterSlideMenu.swift in Sources */,
 				CE8029A023262F9400D4AEFA /* UIView + Extensions.swift in Sources */,
 				CE5F986E2327C67B008385EC /* SearchPhotosProtocols.swift in Sources */,
 				CE8029AC232643F500D4AEFA /* EndPointType.swift in Sources */,

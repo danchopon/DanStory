@@ -24,7 +24,7 @@ class PhotosViewController: UIViewController, PhotosDisplayLogic {
     
     // MARK: - Views
     
-    private let slideMenu = SlideMenu()
+    private let slideMenu = FilterSlideMenu()
     
     private lazy var loadingView: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView(style: .whiteLarge)

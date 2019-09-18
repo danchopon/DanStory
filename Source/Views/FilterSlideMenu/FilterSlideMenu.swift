@@ -1,5 +1,5 @@
 //
-//  SlideMenu.swift
+//  FilterSlideMenu.swift
 //  DanStory
 //
 //  Created by Daniyar Erkinov on 9/12/19.
@@ -41,7 +41,7 @@ protocol SlideMenuDelegate: class {
     func changeNumberOfColumns(number: ViewLayoutSetting)
 }
 
-class SlideMenu: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class FilterSlideMenu: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     let blackView = UIView()
     let cellHeight: CGFloat = 50
