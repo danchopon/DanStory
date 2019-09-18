@@ -39,6 +39,7 @@
 		CE8029BB2326461900D4AEFA /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8029BA2326461900D4AEFA /* ParameterEncoding.swift */; };
 		CE8029BD2326463800D4AEFA /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8029BC2326463800D4AEFA /* URLParameterEncoder.swift */; };
 		CE8029BF2326464F00D4AEFA /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8029BE2326464F00D4AEFA /* JSONParameterEncoder.swift */; };
+		CE82F43023324CCB00635A68 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82F42F23324CCB00635A68 /* MenuItem.swift */; };
 		CE90A213232763A100AF9FE5 /* PhotosProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90A212232763A100AF9FE5 /* PhotosProtocols.swift */; };
 		CEC740E6232B94F300756FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC740E5232B94F300756FB8 /* LaunchScreen.storyboard */; };
 		CEE73CBE232A6623003D2449 /* FilterSlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73CBD232A6623003D2449 /* FilterSlideMenu.swift */; };
@@ -83,6 +84,7 @@
 		CE8029BA2326461900D4AEFA /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		CE8029BC2326463800D4AEFA /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
 		CE8029BE2326464F00D4AEFA /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		CE82F42F23324CCB00635A68 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		CE90A212232763A100AF9FE5 /* PhotosProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosProtocols.swift; sourceTree = "<group>"; };
 		CEC740E5232B94F300756FB8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEE73CBD232A6623003D2449 /* FilterSlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSlideMenu.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 		CE82F42E2332450F00635A68 /* ContextMenu */ = {
 			isa = PBXGroup;
 			children = (
+				CE82F42F23324CCB00635A68 /* MenuItem.swift */,
 			);
 			path = ContextMenu;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				CE2A111B23266FCE0079145F /* Secrets.swift in Sources */,
 				CE8029BF2326464F00D4AEFA /* JSONParameterEncoder.swift in Sources */,
 				CE5F986C2327C55E008385EC /* SearchPhotosWorker.swift in Sources */,
+				CE82F43023324CCB00635A68 /* MenuItem.swift in Sources */,
 				CE8029A5232642C800D4AEFA /* AppCoordinator.swift in Sources */,
 				CEFC3424232F89FA00399875 /* FilterViewSectionHeader.swift in Sources */,
 				CE2A111723265BB70079145F /* Constants.swift in Sources */,
