@@ -39,7 +39,7 @@ class ContextMenuView: UIView {
     /// The view that represents the users's touch point
     var touchPointView: UIView!
     
-    /// The properties configuration for the JonContextMenuView
+    /// The properties configuration for the ContextMenuView
     private var properties: ContextMenu!
     
     /// The distance between the touch point and the menu items
@@ -94,7 +94,7 @@ class ContextMenuView: UIView {
         self.addSubview(label)
     }
     
-    /// Configure the views to start with the properties set in the JonContextMenu class
+    /// Configure the views to start with the properties set in the ContextMenu class
     private func configureViews() {
         
         /// Sets the default colour of the items
@@ -129,6 +129,9 @@ class ContextMenuView: UIView {
             self.addSubview(item)
             animateItem(item)
         }
+        
+        vibrateWithLightHaptic()
+       
     }
     
     /// Creates the touch point view
@@ -202,7 +205,6 @@ class ContextMenuView: UIView {
         guard let direction = currentDirection else {
             return
         }
-        print(direction)
         switch (direction) {
         case (.down, .right):
             positiveQuorterAngle(startAngle: 0)
@@ -275,6 +277,9 @@ class ContextMenuView: UIView {
             item.wrapper.center = CGPoint(x: newX, y: newY)
             item.wrapper.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }, completion: nil)
+        
+        vibrateWithSelectionHaptic()
+
     }
     
     /// Deactivate the  item
@@ -343,6 +348,18 @@ class ContextMenuView: UIView {
         } else {
             return 10
         }
+    }
+    
+    private func vibrateWithLightHaptic() {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.prepare()
+        generator.impactOccurred()
+    }
+    
+    private func vibrateWithSelectionHaptic() {
+        let generator = UISelectionFeedbackGenerator()
+        generator.prepare()
+        generator.selectionChanged()
     }
 }
 

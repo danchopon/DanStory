@@ -21,7 +21,7 @@ import UIKit
     /// The items to be displayed
     var items: [MenuItem] = []
     
-    /// The delegate to notify the JonContextMenu host when an item is selected
+    /// The delegate to notify the ContextMenu host when an item is selected
     var delegate: ContextMenuDelegate?
     
     /// The Background's alpha of the view
@@ -58,19 +58,19 @@ import UIKit
         super.init()
     }
     
-    /// Sets the items for the JonContextMenu
+    /// Sets the items for the ContextMenu
     @objc open func setItems(_ items: [MenuItem]) -> ContextMenu{
         self.items = items
         return self
     }
     
-    /// Sets the delegate for the JonContextMenu
+    /// Sets the delegate for the ContextMenu
     @objc open func setDelegate(_ delegate: ContextMenuDelegate?) -> ContextMenu {
         self.delegate = delegate
         return self
     }
     
-    /// Sets the background of the JonContextMenu
+    /// Sets the background of the ContextMenu
     @objc open func setBackgroundColorTo(_ backgroundColor: UIColor, withAlpha alpha:CGFloat = 0.9) -> ContextMenu {
         self.backgroundAlpha = alpha
         self.backgroundColor = backgroundColor
@@ -101,41 +101,41 @@ import UIKit
         return self
     }
     
-    /// Sets the colour of the JonContextMenu items title
+    /// Sets the colour of the ContextMenu items title
     @objc open func setItemsTitleColorTo(_ color: UIColor) -> ContextMenu {
         self.itemsTitleColor = color
         return self
     }
     
-    /// Sets the size of the JonContextMenu items title
+    /// Sets the size of the ContextMenu items title
     @objc open func setItemsTitleSizeTo(_ size: CGFloat) -> ContextMenu {
         self.itemsTitleSize = size
         return self
     }
     
-    /// Sets the colour of the JonContextMenu touch point
+    /// Sets the colour of the ContextMenu touch point
     @objc open func setTouchPointColorTo(_ color: UIColor) -> ContextMenu {
         self.touchPointColor = color
         return self
     }
     
-    /// Builds the JonContextMenu
+    /// Builds the ContextMenu
     @objc open func build() -> Builder {
         return Builder(self)
     }
     
     @objc open class Builder: UILongPressGestureRecognizer {
         
-        /// The wrapper for the JonContextMenu
+        /// The wrapper for the ContextMenu
         private var window: UIWindow!
         
         /// The selected menu item
         private var currentItem: MenuItem?
         
-        /// The JonContextMenu view
+        /// The ContextMenu view
         private var contextMenuView: ContextMenuView!
         
-        /// The properties configuration to add to the JonContextMenu view
+        /// The properties configuration to add to the ContextMenu view
         private var properties: ContextMenu!
         
         /// Indicates if there is a menu item active
@@ -217,7 +217,7 @@ import UIKit
             }
         }
         
-        /// Creates the JonContextMenu view and adds to the Window
+        /// Creates the ContextMenu view and adds to the Window
         private func showMenu(on location: CGPoint) {
             currentItem = nil
             contextMenuView = ContextMenuView(properties, touchPoint: location)
@@ -226,7 +226,7 @@ import UIKit
             properties.delegate?.menuOpened()
         }
         
-        /// Removes the JonContextMenu view from the Window
+        /// Removes the ContextMenu view from the Window
         private func dismissMenu() {
             if let currentItem = currentItem {
                 contextMenuView.deactivate(currentItem)
